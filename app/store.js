@@ -5,11 +5,6 @@ const icecreamReducer = require('../features/icecream/icecreamSlice').reducer;
 
 const logger = reduxLogger.createLogger();
 
-const configureMiddleware = (() => {
-  const middlewares = [logger]
-  return middlewares;
-})
-
 const store = configureStore({
   reducer: {
     cake: cakeReducer,
