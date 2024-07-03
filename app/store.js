@@ -1,6 +1,6 @@
 const configureStore = require('@reduxjs/toolkit').configureStore;
-const cakeReducer = require('../reduxToolkit/features/cake/cakeSlice');
-const icecreamReducer = require('../reduxToolkit/features/icecream/icecreamSlice');
+const cakeReducer = require('../features/cake/cakeSlice').reducer;
+const icecreamReducer = require('../features/icecream/icecreamSlice').reducer;
 
 const store = configureStore({
   reducer: {
