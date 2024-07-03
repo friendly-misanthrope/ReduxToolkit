@@ -17,5 +17,4 @@ const icecreamSlice = createSlice({
   }
 });
 
-module.exports = icecreamSlice.reducer;
 module.exports = icecreamSlice;
