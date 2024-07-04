@@ -24,6 +24,11 @@ const usersSlice = createSlice({
   extraReducers: (builder) => {
     builder.addCase(fetchUsers.pending, (state) => {
       state.loading = true;
+    }),
+    builder.addCase(fetchUsers.fulfilled, (state, action) => {
+      state.loading = false;
+      state.users = action.payload;
+      state.error = '';
     })
   }
 })
