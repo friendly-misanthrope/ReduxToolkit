@@ -17,3 +17,13 @@ const fetchUsers = createAsyncThunk('users/fetchUsers', () => {
       });
     });
 });
+
+const usersSlice = createSlice({
+  name: users,
+  initialState,
+  extraReducers: (builder) => {
+    builder.addCase(fetchUsers.pending, (state) => {
+      state.loading = true;
+    })
+  }
+})
