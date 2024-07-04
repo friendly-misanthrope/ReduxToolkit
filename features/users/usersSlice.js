@@ -29,6 +29,12 @@ const usersSlice = createSlice({
       state.loading = false;
       state.users = action.payload;
       state.error = '';
-    })
+    }),
+    builder.addCase(fetchUsers.rejected, (state, action) => {
+      state.loading = false;
+      state.error = action.payload
+    });
   }
-})
+});
+
+module.exports = usersSlice;
