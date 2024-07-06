@@ -10,7 +10,7 @@ const initialState = {
 
 // Promise resolves to pending, fulfilled, or rejected action type
 const fetchUsers = createAsyncThunk('users/fetchUsers', () => {
-  return axios.get('https://jsonplaceholder.typicode.com/users')
+  return axios.get('https://jsonplaceholder.typicode.com/userss')
     .then((users) => users.data.map(user => user))
 })
 
@@ -29,7 +29,7 @@ const userSlice = createSlice({
     builder.addCase(fetchUsers.rejected, (state, action) => {
       state.loading = false;
       state.users = [];
-      state.error = action.action.error.message;
+      state.error = action.error.message;
     });
   }
 });
